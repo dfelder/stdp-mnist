@@ -338,7 +338,7 @@ eqs_stdp_ee = '''
 eqs_stdp_pre_ee = 'pre = 1.; w -= nu_ee_pre * post1'
 eqs_stdp_post_ee = 'post2before = post2; w += nu_ee_post * pre * post2before; post1 = 1.; post2 = 1.'
     
-b.ion()
+# b.ion()
 fig_num = 1
 neuron_groups = {}
 input_groups = {}
@@ -396,7 +396,7 @@ for name in population_names:
 if record_spikes:
     b.figure(fig_num)
     fig_num += 1
-    b.ion()
+    # b.ion()
     b.subplot(211)
     b.raster_plot(spike_monitors['Ae'], refresh=1000*b.ms, showlast=1000*b.ms)
     b.subplot(212)
