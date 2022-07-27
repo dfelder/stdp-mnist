@@ -310,7 +310,7 @@ v_thresh_e = '(v>(theta - offset + ' + str(v_thresh_e) + ')) * (timer>refrac_e)'
 
 
 neuron_eqs_e = '''
-        dv/dt = ((v_rest_e - v) + (I_synE+I_synI) / nS) / (100*ms)  : volt
+        dv/dt = ((-65. * mV - v) + (I_synE+I_synI) / nS) / (100*ms)  : volt
         I_synE = ge * nS *         -v                           : amp
         I_synI = gi * nS * (-100.*mV-v)                          : amp
         dge/dt = -ge/(1.0*ms)                                   : 1
