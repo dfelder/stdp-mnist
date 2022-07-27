@@ -306,7 +306,7 @@ else:
     theta_plus_e = 0.05 * b.mV
     scr_e = 'v = v_reset_e; theta += theta_plus_e; timer = 0*ms'
 offset = 20.0*b.mV
-v_thresh_e = '(v>(theta - offset + ' + str(v_thresh_e) + ')) * (timer>refrac_e)'
+v_thresh_e = '(v>(theta - offset + -52. * mV)) * (timer>refrac_e)'
 
 
 neuron_eqs_e = '''
